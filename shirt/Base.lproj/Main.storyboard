@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Z4x-37-Jty">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="HRJ-xA-M9S">
+            <objects>
+                <viewController id="Z4x-37-Jty" customClass="ViewController" customModule="shirt" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="maY-HW-PDC"/>
+                        <viewControllerLayoutGuide type="bottom" id="jvQ-AV-jl9"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="L3q-m9-4pX">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="product_type_2_front" translatesAutoresizingMaskIntoConstraints="NO" id="R76-MM-bXa">
+                                <rect key="frame" x="0.0" y="164" width="375" height="364"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ttG-Se-Tt4">
+                                <rect key="frame" x="313" y="28" width="46" height="30"/>
+                                <state key="normal" title="Add"/>
+                                <connections>
+                                    <action selector="addStickerToImage:" destination="Z4x-37-Jty" eventType="touchDown" id="T9K-0M-zqO"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jT1-4p-xYA">
+                                <rect key="frame" x="16" y="28" width="34" height="30"/>
+                                <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="saveImage:" destination="Z4x-37-Jty" eventType="touchDown" id="rhM-8D-q60"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="Test" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Mxt-lH-kKT">
+                                <rect key="frame" x="139" y="28" width="97" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iSV-4D-Ed3" customClass="ShirtView" customModule="shirt" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="164" width="375" height="364"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="jT1-4p-xYA" firstAttribute="leading" secondItem="L3q-m9-4pX" secondAttribute="leadingMargin" id="4Pd-pp-zkh"/>
+                            <constraint firstItem="ttG-Se-Tt4" firstAttribute="top" secondItem="maY-HW-PDC" secondAttribute="bottom" constant="8" id="5je-RR-INV"/>
+                            <constraint firstAttribute="trailing" secondItem="R76-MM-bXa" secondAttribute="trailing" id="6QQ-4s-wRK"/>
+                            <constraint firstItem="jvQ-AV-jl9" firstAttribute="top" secondItem="R76-MM-bXa" secondAttribute="bottom" constant="139" id="Bh0-6P-QgX"/>
+                            <constraint firstItem="ttG-Se-Tt4" firstAttribute="leading" secondItem="Mxt-lH-kKT" secondAttribute="trailing" constant="77" id="TNU-2I-mvZ"/>
+                            <constraint firstItem="Mxt-lH-kKT" firstAttribute="top" secondItem="maY-HW-PDC" secondAttribute="bottom" constant="8" id="Wag-G2-2nE"/>
+                            <constraint firstItem="Mxt-lH-kKT" firstAttribute="leading" secondItem="jT1-4p-xYA" secondAttribute="trailing" constant="89" id="dTg-ca-U9g"/>
+                            <constraint firstItem="R76-MM-bXa" firstAttribute="top" secondItem="Mxt-lH-kKT" secondAttribute="bottom" constant="106" id="kRc-Yq-j4Y"/>
+                            <constraint firstItem="R76-MM-bXa" firstAttribute="top" secondItem="Mxt-lH-kKT" secondAttribute="bottom" constant="105" id="lWo-qY-NGf"/>
+                            <constraint firstItem="R76-MM-bXa" firstAttribute="leading" secondItem="L3q-m9-4pX" secondAttribute="leading" id="xAF-4Z-I7C"/>
+                            <constraint firstItem="ttG-Se-Tt4" firstAttribute="trailing" secondItem="L3q-m9-4pX" secondAttribute="trailingMargin" id="xZo-ji-tJI"/>
+                            <constraint firstItem="jT1-4p-xYA" firstAttribute="top" secondItem="maY-HW-PDC" secondAttribute="bottom" constant="8" id="zTF-Oo-ItP"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="addImage" destination="ttG-Se-Tt4" id="MSG-wQ-0Oh"/>
+                        <outlet property="customView" destination="iSV-4D-Ed3" id="3rE-Mz-RVW"/>
+                        <outlet property="saveImage" destination="jT1-4p-xYA" id="adj-lP-rs5"/>
+                        <outlet property="sticker" destination="R76-MM-bXa" id="xW4-qK-UT5"/>
+                        <outlet property="text" destination="Mxt-lH-kKT" id="Z90-sJ-ORt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="I9G-pa-dpL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="lh4-A9-dpV" customClass="ShirtView" customModule="shirt" customModuleProvider="target"/>
+            </objects>
+            <point key="canvasLocation" x="-223.19999999999999" y="18.440779610194905"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="product_type_2_front" width="530" height="630"/>
+    </resources>
+</document>
